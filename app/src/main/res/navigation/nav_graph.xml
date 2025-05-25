@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/girisFragment">
+
+    <fragment
+        android:id="@+id/girisFragment"
+        android:name="com.mirackalyoncu.orvion.view.GirisFragment"
+        android:label="fragment_giris"
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_girisFragment_to_sifreGirisFragment"
+            app:destination="@id/sifreGirisFragment" />
+        <action
+            android:id="@+id/action_girisFragment_to_kayitFragment"
+            app:destination="@id/kayitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitFragment"
+        android:name="com.mirackalyoncu.orvion.view.KayitFragment"
+        android:label="fragment_kayit"
+        tools:layout="@layout/fragment_kayit" >
+        <argument
+            android:name="bilgi"
+            app:argType="string"    />
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_kayitFragment_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sifreGirisFragment"
+        android:name="com.mirackalyoncu.orvion.view.SifreGirisFragment"
+        android:label="fragment_sifre_giris"
+        tools:layout="@layout/fragment_sifre_giris" >
+        <argument
+            android:name="bilgi"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_sifreGirisFragment_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.mirackalyoncu.orvion.view.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_surecOlusturFragment"
+            app:destination="@id/surecOlusturFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_gorevListesiFragment"
+            app:destination="@id/gorevListesiFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_sureceKatilFragment"
+            app:destination="@id/sureceKatilFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_gelenKutusuFragment"
+            app:destination="@id/gelenKutusuFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_girisFragment"
+            app:destination="@id/girisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/surecOlusturFragment"
+        android:name="com.mirackalyoncu.orvion.view.SurecOlusturFragment"
+        android:label="SurecOlusturFragment" >
+        <argument
+            android:name="kullaniciId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/gorevListesiFragment"
+        android:name="com.mirackalyoncu.orvion.view.GorevListesiFragment"
+        android:label="GorevListesiFragment"
+
+
+
+        >
+        <argument
+            android:name="kullaniciId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gorevListesiFragment_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment" />
+        <action
+            android:id="@+id/action_gorevListesiFragment_to_gelenKutusuFragment"
+            app:destination="@id/gelenKutusuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sureceKatilFragment"
+        android:name="com.mirackalyoncu.orvion.view.SureceKatilFragment"
+        android:label="fragment_surece_katil"
+        tools:layout="@layout/fragment_surece_katil" >
+        <argument
+            android:name="kullaniciId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/gelenKutusuFragment"
+        android:name="com.mirackalyoncu.orvion.view.GelenKutusuFragment"
+        android:label="GelenKutusuFragment" >
+        <argument
+            android:name="kullaniciId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gelenKutusuFragment_to_mailGonderFragment"
+            app:destination="@id/mailGonderFragment" />
+        <action
+            android:id="@+id/action_gelenKutusuFragment_to_gidenKutusuFragment"
+            app:destination="@id/gidenKutusuFragment" />
+        <action
+            android:id="@+id/action_gelenKutusuFragment_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment" />
+        <action
+            android:id="@+id/action_gelenKutusuFragment_to_gorevListesiFragment"
+            app:destination="@id/gorevListesiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mailGonderFragment"
+        android:name="com.mirackalyoncu.orvion.view.MailGonderFragment"
+        android:label="MailGonderFragment" >
+        <argument
+            android:name="kullaniciId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_mailGonderFragment_to_gidenKutusuFragment"
+            app:destination="@id/gidenKutusuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gidenKutusuFragment"
+        android:name="com.mirackalyoncu.orvion.view.GidenKutusuFragment"
+        android:label="fragment_giden_kutusu"
+        tools:layout="@layout/fragment_giden_kutusu" >
+        <argument
+            android:name="kullaniciId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

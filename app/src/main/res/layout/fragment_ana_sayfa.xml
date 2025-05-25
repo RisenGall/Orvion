@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AnaSayfaFragment">
+
+    <TextView
+        android:id="@+id/sureclerYazisiTextView"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="#2c3e50"
+        android:gravity="center"
+        android:text="Süreçler"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sureclerRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/sureclerYazisiTextView"
+        app:layout_constraintBottom_toTopOf="@id/navBarCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Görsel: süreç dahil -->
+    <ImageView
+        android:id="@+id/sureceDahilOlImageView"
+        android:layout_width="300dp"
+        android:layout_height="388dp"
+        android:src="@drawable/surece_dahil"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/navBarCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Görsel: süreç oluştur -->
+    <ImageView
+        android:id="@+id/surecOlusturImageView"
+        android:layout_width="300dp"
+        android:layout_height="388dp"
+        android:src="@drawable/surec_olustur"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/sureclerYazisiTextView"
+        app:layout_constraintBottom_toBottomOf="@id/navBarCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- FAB benzeri artı butonu -->
+    <ImageButton
+        android:id="@+id/artiImageButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/arti_kucuk"
+        app:tint="#2F323A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navBarCardView" />
+
+    <!-- Alt Navigasyon Bar - CardView içinde -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/navBarCardView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/navBarLinearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp">
+
+            <!-- Görev -->
+            <LinearLayout
+                android:id="@+id/navGorevContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/gorevImageButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tick_kucuk"
+                    app:tint="#2c3e50" />
+
+                <View
+                    android:id="@+id/gorevIndicator"
+                    android:layout_width="30dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/selected_nav_indicator"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <!-- AnaSayfa -->
+            <LinearLayout
+                android:id="@+id/navAnaSayfaContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/anaSayfaImageButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/orvion_kucuk" />
+
+                <View
+                    android:id="@+id/anaSayfaIndicator"
+                    android:layout_width="30dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/selected_nav_indicator"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!-- Mail -->
+            <LinearLayout
+                android:id="@+id/navMailContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/mailImageButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mail_kucuk"
+                    app:tint="#2c3e50" />
+
+                <View
+                    android:id="@+id/mailIndicator"
+                    android:layout_width="30dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/selected_nav_indicator"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/logOutImageButton"
+        android:layout_width="39dp"
+        android:layout_height="42dp"
+
+
+        android:layout_margin="8dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/log_out"
+        app:layout_constraintBottom_toBottomOf="@+id/sureclerYazisiTextView"
+        app:layout_constraintEnd_toEndOf="@+id/sureclerYazisiTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

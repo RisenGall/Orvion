@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <Spinner
+        android:id="@+id/spinnerAlicilar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#CCCCCC"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/editTextKonu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Konu"
+        android:background="@drawable/rounded_edittext_bg"
+        android:padding="12dp"
+        android:textColor="#222222"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerAlicilar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextIcerik"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:hint="İçerik"
+        android:background="@drawable/rounded_edittext_bg"
+        android:padding="12dp"
+        android:textColor="#444444"
+        android:textSize="15sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextKonu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonGonder" />
+
+    <Button
+        android:id="@+id/buttonGonder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#2c3e50"
+        android:text="Gönder"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:paddingVertical="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

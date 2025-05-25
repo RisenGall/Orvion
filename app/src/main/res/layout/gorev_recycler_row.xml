@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvSurecBaslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Süreç ID"
+            android:textColor="#2c3e50"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvGorevBaslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Görev Başlığı"
+            android:textColor="#34495e"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvGorevAciklama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Görev Açıklaması"
+            android:textColor="#7f8c8d"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:id="@+id/tvSonTarih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bitiş Tarihi"
+            android:textColor="#95a5a6"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerDurum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown"
+            android:backgroundTint="#2c3e50"
+            android:popupBackground="#ecf0f1"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

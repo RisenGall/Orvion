@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_mail_gonder"
+        android:title="Mail Gönder"
+        android:icon="@drawable/mail_gonder" />
+    <item
+        android:id="@+id/menu_giden_kutusu"
+        android:title="Giden Kutusu"
+        android:icon="@drawable/giden_mail" />
+</menu>

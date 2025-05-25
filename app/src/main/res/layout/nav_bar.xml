@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navBarLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="101dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="#FFFFFF">
+
+    <!-- Görev -->
+    <LinearLayout
+        android:id="@+id/navGorevContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/gorevImageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="25dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tick_kucuk"
+            app:tint="#2c3e50" />
+
+        <View
+            android:id="@+id/gorevIndicator"
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:background="@drawable/selected_nav_indicator"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!-- AnaSayfa -->
+    <LinearLayout
+        android:id="@+id/navAnaSayfaContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/anaSayfaImageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="25dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/orvion_kucuk" />
+
+        <View
+            android:id="@+id/anaSayfaIndicator"
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:background="@drawable/selected_nav_indicator"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <!-- Mail -->
+    <LinearLayout
+        android:id="@+id/navMailContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/mailImageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="25dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mail_kucuk"
+            app:tint="#2c3e50" />
+
+        <View
+            android:id="@+id/mailIndicator"
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:background="@drawable/selected_nav_indicator"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <!-- Mail Icon -->
+        <ImageView
+            android:id="@+id/imageViewMailIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/mail_item"
+            android:tint="@color/primary_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Mail Icon" />
+
+        <!-- Okunmamış durum göstergesi -->
+        <View
+            android:id="@+id/viewOkunmamisGosterge"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/unread_mail"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewMailIcon"
+            app:layout_constraintStart_toEndOf="@id/imageViewMailIcon"
+            android:visibility="gone" />
+
+        <!-- Konu -->
+        <TextView
+            android:id="@+id/textViewKonu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Konu"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#222222"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/viewOkunmamisGosterge"
+            app:layout_constraintTop_toTopOf="@id/imageViewMailIcon"
+            app:layout_constraintEnd_toStartOf="@id/imageViewOkunduIcon" />
+
+        <!-- Okundu Icon -->
+        <ImageView
+            android:id="@+id/imageViewOkunduIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/read_mail"
+            android:tint="#4CAF50"
+            app:layout_constraintTop_toTopOf="@id/textViewKonu"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="Okundu Durumu" />
+
+        <!-- İçerik -->
+        <TextView
+            android:id="@+id/textViewIcerik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mesaj içeriği burada yer alır..."
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewKonu"
+            app:layout_constraintStart_toStartOf="@id/textViewKonu"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Alıcının Mail Adresi -->
+        <TextView
+            android:id="@+id/textViewAlici"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="alicimail@ornek.com"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewIcerik"
+            app:layout_constraintStart_toStartOf="@id/textViewIcerik"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tarih -->
+        <TextView
+            android:id="@+id/textViewTarih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 Mayıs 2025"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewAlici"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
