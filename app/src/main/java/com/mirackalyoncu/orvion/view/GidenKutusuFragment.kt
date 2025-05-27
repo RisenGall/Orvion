@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mirackalyoncu.orvion.adapter.MailAdapter
@@ -39,6 +41,31 @@ class GidenKutusuFragment : Fragment() {
 
         setupRecyclerView()
         observeGidenMailler(kullaniciId)
+
+        binding.anaSayfaImageButton.setOnClickListener {
+            val action = GelenKutusuFragmentDirections.actionGelenKutusuFragmentToAnaSayfaFragment(kullaniciId)
+            Navigation.findNavController(requireView()).navigate(action)
+        }
+
+        binding.gorevImageButton.setOnClickListener {
+
+                val action = GidenKutusuFragmentDirections.actionGidenKutusuFragmentToGorevListesiFragment(
+                    kullaniciId = kullaniciId,
+
+                    )
+                Navigation.findNavController(requireView()).navigate(action)
+
+        }
+
+        binding.mailImageButton.setOnClickListener {
+            val action = GidenKutusuFragmentDirections.actionGidenKutusuFragmentToGelenKutusuFragment(kullaniciId=kullaniciId)
+            Navigation.findNavController(requireView()).navigate(action)
+        }
+
+        binding.anaSayfaImageButton.setOnClickListener {
+            val action = GidenKutusuFragmentDirections.actionGidenKutusuFragmentToAnaSayfaFragment(id=kullaniciId)
+            Navigation.findNavController(requireView()).navigate(action)
+        }
     }
 
     private fun setupRecyclerView() {

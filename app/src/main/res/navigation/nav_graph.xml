@@ -149,5 +149,14 @@
         <argument
             android:name="kullaniciId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_gidenKutusuFragment_to_gelenKutusuFragment"
+            app:destination="@id/gelenKutusuFragment" />
+        <action
+            android:id="@+id/action_gidenKutusuFragment_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment" />
+        <action
+            android:id="@+id/action_gidenKutusuFragment_to_gorevListesiFragment"
+            app:destination="@id/gorevListesiFragment" />
     </fragment>
 </navigation>

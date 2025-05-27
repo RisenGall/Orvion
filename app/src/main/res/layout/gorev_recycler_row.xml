@@ -15,6 +15,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- SÜREÇ ID -->
         <TextView
             android:id="@+id/tvSurecBaslik"
             android:layout_width="wrap_content"
@@ -24,33 +25,39 @@
             android:textStyle="bold"
             android:textSize="16sp" />
 
+        <!-- GÖREV BAŞLIĞI -->
         <TextView
             android:id="@+id/tvGorevBaslik"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Görev Başlığı"
-            android:textColor="#34495e"
+            android:textColor="#2c3e50"
             android:textSize="14sp"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginTop="4dp"
+            android:textStyle="bold" />
 
+        <!-- GÖREV AÇIKLAMASI -->
         <TextView
             android:id="@+id/tvGorevAciklama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Görev Açıklaması"
-            android:textColor="#7f8c8d"
-            android:textSize="13sp"
-            android:layout_marginTop="2dp"/>
+            android:textColor="#555555"
+            android:textSize="13.5sp"
+            android:layout_marginTop="2dp"
+            android:lineSpacingExtra="2dp" />
 
+        <!-- BİTİŞ TARİHİ -->
         <TextView
             android:id="@+id/tvSonTarih"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bitiş Tarihi"
-            android:textColor="#95a5a6"
+            android:textColor="#666666"
             android:textSize="13sp"
-            android:layout_marginTop="2dp"/>
+            android:layout_marginTop="2dp" />
 
+        <!-- DURUM SPINNER -->
         <Spinner
             android:id="@+id/spinnerDurum"
             android:layout_width="wrap_content"
@@ -58,7 +65,7 @@
             android:layout_marginTop="10dp"
             android:spinnerMode="dropdown"
             android:backgroundTint="#2c3e50"
-            android:popupBackground="#ecf0f1"/>
+            android:popupBackground="#ecf0f1" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

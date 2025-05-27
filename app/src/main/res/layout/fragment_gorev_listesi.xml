@@ -5,7 +5,7 @@
     android:id="@+id/fragmentGorevListesi"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ecf0f1">
+    android:background="#FFFFFF">
 
     <!-- Başlık -->
     <TextView

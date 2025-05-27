@@ -1,5 +1,9 @@
 package com.mirackalyoncu.orvion.adapter
 
+import android.graphics.Typeface
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,10 +48,26 @@ class MailAdapter(
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ kullanici ->
-                    textViewAlici.text = "$etiket: ${kullanici.email}"
+                    val text = "$etiket: ${kullanici.email}"
+                    textViewAlici.text = SpannableString(text).apply {
+                        setSpan(
+                            StyleSpan(Typeface.BOLD),
+                            0,
+                            etiket.length + 1,
+                            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                        )
+                    }
                     textViewAlici.visibility = View.VISIBLE
                 }, {
-                    textViewAlici.text = "$etiket: Bilinmiyor"
+                    val text = "$etiket: Bilinmiyor"
+                    textViewAlici.text = SpannableString(text).apply {
+                        setSpan(
+                            StyleSpan(Typeface.BOLD),
+                            0,
+                            etiket.length + 1,
+                            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                        )
+                    }
                     textViewAlici.visibility = View.VISIBLE
                 })
 
